@@ -10,12 +10,12 @@ public class ThisClassIsTested
   
   public String thisMethodIsTestedAndChanged(String str)
   {
-    return str;
+    return str + "_Changed";
   }
   
   private String thisPrivateMethodIsTestedAndChanged(String str)
   {
-    return str + str;
+    return str + str + "_Changed";
   }
   
   private String thisPrivateMethodIsTestedAndNotChanged(String str)

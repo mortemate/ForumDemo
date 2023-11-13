@@ -9,12 +9,12 @@ public class ThisClassIsNotTested
   
   public String thisMethodIsNotTestedAndChanged(String str)
   {
-    return str;
+    return str + "_Changed";
   }
   
   private String thisPrivateMethodIsNotTestedAndChanged(String str)
   {
-    return str + str;
+    return str + str + "_Changed";
   }
   
   private String thisPrivateMethodIsNotTestedAndNotChanged(String str)

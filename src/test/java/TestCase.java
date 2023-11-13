@@ -1,3 +1,4 @@
+import com.kyriba.rtest.classes.NewClass;
 import com.kyriba.rtest.classes.ThisClassIsTested;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +12,7 @@ public class TestCase
   @Test
   void coverChangedMethodTest()
   {
-    assert tested.thisMethodIsTestedAndChanged("This method will be changed").equals("This method will be changed");
+    assert tested.thisMethodIsTestedAndChanged("This method will be changed").equals("This method will be changed_Changed");
   }
   
   
@@ -25,7 +26,7 @@ public class TestCase
   @Test
   void coverChangedPrivateMethodTest()
   {
-    assert tested.callPrivateMethods("Repeat twice ", true).equals("Repeat twice Repeat twice ");
+    assert tested.callPrivateMethods("Repeat twice ", true).equals("Repeat twice Repeat twice _Changed");
   }
   
   @Test
@@ -33,5 +34,14 @@ public class TestCase
   {
     assert tested.callPrivateMethods("Repeat three times ", false)
                  .equals("Repeat three times Repeat three times Repeat three times ");
+  }
+  
+  @Test
+  void coverNewClass()
+  {
+    NewClass newClass = new NewClass(4);
+    newClass.newTestedMethod();
+    System.out.println(newClass.getX());
+    assert newClass.getX() == 8;
   }
 }
