@@ -15,9 +15,13 @@ public class ThisClassIsTested
   
   private String thisPrivateMethodIsTestedAndChanged(String str)
   {
-    return str + str + "_Changed";
+    if (str.equals(" ")) {
+      return "_";
+    }
+    else {
+      return str + str + "_Changed";
+    }
   }
-  
   private String thisPrivateMethodIsTestedAndNotChanged(String str)
   {
     return str + str + str;
